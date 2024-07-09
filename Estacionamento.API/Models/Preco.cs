@@ -1,7 +1,7 @@
 
 using System.ComponentModel.DataAnnotations;
 
-namespace Estacionamento.API.Data
+namespace Estacionamento.API.Models
 {
     public class Preco
     {

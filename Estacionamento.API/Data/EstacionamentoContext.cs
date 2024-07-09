@@ -1,3 +1,5 @@
+// using Estacionamento.API.Models;
+using EstacionamentoNamespace = Estacionamento.API.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Estacionamento.API.Data
@@ -8,7 +10,7 @@ namespace Estacionamento.API.Data
         {
         }
 
-        public DbSet<Estacionamento> Estacionamento { get; set; }
-        public DbSet<Preco> Preco { get; set; }
+        public DbSet<EstacionamentoNamespace.Estacionamento> Estacionamento { get; set; }
+        public DbSet<EstacionamentoNamespace.Preco> Preco { get; set; }
     }
 }
