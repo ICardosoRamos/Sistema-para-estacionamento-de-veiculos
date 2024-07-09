@@ -10,13 +10,10 @@ namespace Estacionamento.API.Controllers
     [Route("api/[controller]")]
     public class EstacionamentoController : ControllerBase
     {
-        private readonly ApplicationDBContext _context;
-        public EstacionamentoController(ApplicationDBContext context)
-        {
-            _context = context
-        }
-
-        // [HttpGet]
-        // public 
+        // private readonly ApplicationDBContext _context;
+        // public EstacionamentoController(ApplicationDBContext context)
+        // {
+        //     _context = context
+        // }
     }
 }
