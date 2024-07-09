@@ -2,13 +2,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Estacionamento.API.Data
 {
-    public class EstacionamentoContext : DbContext
+    public class AplicationDBContext : DbContext
     {
-        public EstacionamentoContext(DbContextOptions<EstacionamentoContext> options)
-        : base(options)
-        { }
+        public AplicationDBContext(DbContextOptions dbContextOptions) : base(dbContextOptions)
+        {
+        }
 
-        public DbSet<Estacionamento> Estacionamentos { get; set; }
-
+        public DbSet<Estacionamento> Estacionamento { get; set; }
+        public DbSet<Preco> Preco { get; set; }
     }
 }

@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Estacionamento.API.Migrations
 {
-    [DbContext(typeof(EstacionamentoContext))]
-    partial class EstacionamentoContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(AplicationDBContext))]
+    partial class AplicationDBContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -23,31 +23,51 @@ namespace Estacionamento.API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<TimeSpan>("Duracao")
+                    b.Property<TimeSpan?>("Duracao")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("HorarioChegada")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("HorarioSaida")
+                    b.Property<DateTime?>("HorarioSaida")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Placa")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<decimal>("Preco")
+                    b.Property<decimal?>("PrecoHora")
                         .HasColumnType("TEXT");
 
-                    b.Property<TimeSpan>("TempoCobrado")
+                    b.Property<TimeSpan?>("TempoCobrado")
                         .HasColumnType("TEXT");
 
-                    b.Property<decimal>("ValorAPagar")
+                    b.Property<decimal?>("ValorAPagar")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Estacionamentos");
+                    b.ToTable("Estacionamento");
+                });
+
+            modelBuilder.Entity("Estacionamento.API.Data.Preco", b =>
+                {
+                    b.Property<int?>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime?>("EndDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal?>("PrecoPorHora")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("StartDate")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Preco");
                 });
 #pragma warning restore 612, 618
         }

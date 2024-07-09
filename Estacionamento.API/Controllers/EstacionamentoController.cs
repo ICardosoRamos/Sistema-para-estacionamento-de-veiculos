@@ -1,19 +1,28 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
+using EstacionamentoNamespace = Estacionamento.API.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Estacionamento.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class EstacionamentoController : ControllerBase
+    public class EstacionamentoController(EstacionamentoNamespace.AplicationDBContext context) : ControllerBase
     {
-        // private readonly ApplicationDBContext _context;
-        // public EstacionamentoController(ApplicationDBContext context)
+        private readonly EstacionamentoNamespace.AplicationDBContext _context = context;
+
+        // [HttpGet]
+        // public async Task<ActionResult<IEnumerable<EstacionamentoNamespace.Estacionamento>>> GetEstacionamentos()
         // {
-        //     _context = context
+        //     return await _context.Estacionamentos.ToListAsync();
         // }
+
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            var estacionamentos = _context.Estacionamento.ToList();
+
+            return Ok(estacionamentos);
+        }
     }
 }
