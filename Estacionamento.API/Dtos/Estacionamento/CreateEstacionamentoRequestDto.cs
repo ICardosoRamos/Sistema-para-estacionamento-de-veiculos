@@ -9,5 +9,7 @@ namespace Estacionamento.API.Dtos.Estacionamento
     {
 
         public string Placa { get; set; } = string.Empty;
+
+        public DateTime HorarioChegada { get; set; } = DateTime.Now;
     }
 }

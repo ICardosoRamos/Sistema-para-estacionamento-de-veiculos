@@ -17,7 +17,7 @@ namespace Estacionamento.API.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.6");
 
-            modelBuilder.Entity("Estacionamento.API.Data.Estacionamento", b =>
+            modelBuilder.Entity("Estacionamento.API.Models.Estacionamento", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -47,27 +47,27 @@ namespace Estacionamento.API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Estacionamento");
+                    b.ToTable("Estacionamentos");
                 });
 
-            modelBuilder.Entity("Estacionamento.API.Data.Preco", b =>
+            modelBuilder.Entity("Estacionamento.API.Models.Preco", b =>
                 {
-                    b.Property<int?>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime?>("EndDate")
+                    b.Property<DateTime>("FimVigencia")
                         .HasColumnType("TEXT");
 
-                    b.Property<decimal?>("PrecoPorHora")
+                    b.Property<DateTime>("InicioVigencia")
                         .HasColumnType("TEXT");
 
-                    b.Property<DateTime?>("StartDate")
+                    b.Property<decimal>("ValorHora")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Preco");
+                    b.ToTable("Precos");
                 });
 #pragma warning restore 612, 618
         }

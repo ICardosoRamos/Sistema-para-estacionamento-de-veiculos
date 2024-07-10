@@ -13,6 +13,12 @@ namespace Estacionamento.API.Mappers
             {
                 Id = estacionamentoModel.Id,
                 Placa = estacionamentoModel.Placa,
+                HorarioChegada = estacionamentoModel.HorarioChegada,
+                HorarioSaida = estacionamentoModel.HorarioSaida,
+                Duracao = estacionamentoModel.Duracao,
+                TempoCobrado = estacionamentoModel.TempoCobrado,
+                PrecoHora = estacionamentoModel.PrecoHora,
+                ValorAPagar = estacionamentoModel.ValorAPagar,
             };
         }
 
@@ -21,6 +27,7 @@ namespace Estacionamento.API.Mappers
             return new EstacionamentoNamespace.Estacionamento
             {
                 Placa = estacionamentoDto.Placa,
+                HorarioChegada = estacionamentoDto.HorarioChegada
             };
         }
     }

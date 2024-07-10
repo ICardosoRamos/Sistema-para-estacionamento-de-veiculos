@@ -10,7 +10,7 @@ namespace Estacionamento.API.Data
         {
         }
 
-        public DbSet<EstacionamentoNamespace.Estacionamento> Estacionamento { get; set; }
-        public DbSet<EstacionamentoNamespace.Preco> Preco { get; set; }
+        public DbSet<EstacionamentoNamespace.Estacionamento> Estacionamentos { get; set; }
+        public DbSet<EstacionamentoNamespace.Preco> Precos { get; set; }
     }
 }

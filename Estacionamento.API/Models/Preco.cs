@@ -7,10 +7,15 @@ namespace Estacionamento.API.Models
     {
 
         [Key]
-        public int? Id { get; set; }
+        public int Id { get; set; }
 
-        public DateTime? StartDate { get; set; }
-        public DateTime? EndDate { get; set; }
-        public decimal? PrecoPorHora { get; set; }
+        [Required]
+        public DateTime InicioVigencia { get; set; }
+
+        [Required]
+        public DateTime FimVigencia { get; set; }
+
+        [Required]
+        public decimal ValorHora { get; set; }
     }
 }
