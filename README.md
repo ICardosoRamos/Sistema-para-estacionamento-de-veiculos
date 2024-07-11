@@ -1,6 +1,9 @@
 # entrevista_benner
 Sistema para estacionamento de veículos
 
+Observações:
+Como este projeto ao meu ver precisaria de 1 semana para ser feito por completo(cheio de validações tanto no back quanto no front, e de preferencia com uma interface bem mais bonita, ousada, com animações e tmb notificações bem visuais estilo Toast), acabou que faltou bastante coisa, mas o basico da implementação solicitada na análise foi feita e imagino que isso seja suficiente para medir meu nível, acredito que como um junior que nao tinha tanta experiencia com c# em específico eu tenha conseguido fazer um bom trabalho e tão pouco tempo, afinal foram apenas dois dias de desenvolvimento, tendo que aprender mt coisa enquanto tentava desenvolver. Agora sem mais delongas...
+
 Instalação:
 
 para rodar o backend é necessário entrar pelo terminal integgrado do visual studio(eu indico usar o vscode que é mais simples para este projeto).
