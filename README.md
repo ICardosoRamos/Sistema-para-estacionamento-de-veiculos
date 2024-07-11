@@ -8,7 +8,10 @@ Instalação:
 
 para rodar o backend é necessário entrar pelo terminal integgrado do visual studio(eu indico usar o vscode que é mais simples para este projeto).
 
-no terminal integrado primeiro entre na pasta Estacionamento.API e depois execute o comando "dotnet watch run", é necessário ter o dotnet disponível versão 8.0 e ter o certificado já confiado no pc, este link mostra os detalhes:
+no terminal integrado primeiro entre na pasta Estacionamento.API e depois execute os comandos:
+"dotnet restore", para criar as pastas obj e bin
+"dotnet build" para verificar erros
+e por ultimo "dotnet watch run", é necessário ter o dotnet disponível versão 8.0 e ter o certificado já confiado no pc, este link mostra os detalhes:
 https://learn.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-8.0&tabs=visual-studio%2Clinux-ubuntu#trust-the-aspnet-core-https-development-certificate-on-windows-and-macos
 
 os preços parametrizados já vem configurados, é possível editá-los somente pelo swagger do backend.
